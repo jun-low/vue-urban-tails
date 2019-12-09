@@ -1,6 +1,62 @@
 <template>
-  <div id="app">
-  </div>
+  <v-app>
+    <main>
+      <div class="app-container">
+        <header class="app-header dark-brown">
+          <h1>My Pet Store</h1>
+        </header>
+        <div class="wrapper">
+          <div class="panel tall-panel light-mint">
+            <h2>Pet Products</h2>
+            <p>Premium Puppy Chow</p>
+            <p>Kibble, sale in bulk, $20/lb</p>
+            <img
+              src="https://raw.githubusercontent.com/VueVixens/projects/master/petshop/images/food.png"
+            />
+          </div>
+          <div class="panel bisque">
+            <h2>Donate</h2>
+          </div>
+          <div class="panel tall-panel light-brown">
+            <h2>Adoptable Pets</h2>
+            <p>Fisher, Chihuahua, age 3</p>
+            <img
+              src="https://raw.githubusercontent.com/VueVixens/projects/master/petshop/images/chihuahua.jpg"
+            />
+          </div>
+
+          <div class="panel bisque">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="panel tall-panel dark-mint">
+            <h2>Pet of the Month</h2>
+            <p>Meet Stanley, A young French Bulldog</p>
+            <img
+              src="https://raw.githubusercontent.com/VueVixens/projects/master/petshop/images/bulldog.jpg"
+            />
+          </div>
+          <div class="panel tall-panel light-mint">
+            <h2>Success Stories</h2>
+            <p>Bennie found his forever home!</p>
+            <img
+              src="https://raw.githubusercontent.com/VueVixens/projects/master/petshop/images/collie.jpg"
+            />
+          </div>
+
+          <div class="panel bisque">
+            <h2>Special Events</h2>
+          </div>
+
+          <div class="panel bisque">
+            <h2>Learn About Pet Ownership</h2>
+          </div>
+        </div>
+        <footer class="app-footer dark-brown">
+          <p>123 Main Street | Smithfield, RI 90987 | 345-456-5678</p>
+        </footer>
+      </div>
+    </main>
+  </v-app>
 </template>
 
 <script>
@@ -8,15 +64,14 @@ export default {
 name: 'app',
 data () {
   return {
-  
+    
   }
 }
 }
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
+@import url('https://fonts.googleapis.com/css?family=Pompiere|Roboto&display=swap');
 /*brown and mint*/
 /*dark brown 32292F
 light mint 99E1D9
@@ -38,6 +93,7 @@ body {
 main {
   padding: 40px;
   font-family: "Roboto", "sans-serif";
+  font-weight: 300;
   background: #fff top center repeat;
   color: #444;
   background-image: url("https://raw.githubusercontent.com/VueVixens/projects/master/petshop/images/bg.jpg");
@@ -45,7 +101,7 @@ main {
 
 h1,
 p {
-  margin: 0 0 1em 0;
+  margin: 0.5em 0;
 }
 
 img {
@@ -58,6 +114,7 @@ img {
   max-width: 940px;
   margin: 0 auto;
   background-color: #fff;
+  font-family: 'Pompiere', cursive;
 }
 
 .app-container > * {
