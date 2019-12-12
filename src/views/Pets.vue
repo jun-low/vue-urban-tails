@@ -21,6 +21,12 @@
 <script>
 import { Dogs } from "../data/dogs";
 import Dog from "../components/Dog.vue";
+import axios from "axios";
+import Axios from 'axios';
+
+// Configured axios to always start API calls to the URL
+axios.defaults.baseURL = "https://dog.ceo/api";
+
 
   export default {
     components: {
@@ -30,6 +36,17 @@ import Dog from "../components/Dog.vue";
       return{
         dogs: Dogs
       };
+    },
+    created () {
+      axios.get('/breed/husky/images/random')
+      .then(res => {
+        // console.log(res.data)
+        const husky = this.dogs.find( dog => dog.breed === 'husky');
+        husky.img = res.data.message
+      })
+      .catch(error => {
+        console.log(error);
+      });
     }
   }
 </script>
