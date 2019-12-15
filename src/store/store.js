@@ -23,4 +23,9 @@ export default new Vuex.Store({
       },
     ]
   },
+  mutations: {
+    addToFavorites(state, payload) {
+      state.favorites.push(payload);
+    }
+  }
 });
