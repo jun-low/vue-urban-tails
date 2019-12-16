@@ -11,7 +11,7 @@
         </v-list-item-avatar>
         <v-list-item-content>{{dog.name}}</v-list-item-content>
         <v-list-item-action>
-          <v-icon>delete</v-icon>
+          <v-icon @click="removeFromFavorites(dog)">delete</v-icon>
         </v-list-item-action>
       </v-list-item>
     </div>
@@ -19,11 +19,16 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
   export default {
     computed: {
       favorites() {
         return this.$store.state.favorites;
       }
+    },
+    methods: {
+      ...mapActions(["removeFromFavorites"])
     }
   };
 </script>
