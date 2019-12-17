@@ -13,7 +13,7 @@
   <v-form v-else v-model="valid">
     <v-text-field label="Name" required :rules="nameRules" v-model="name"></v-text-field>
     <v-text-field label="Email" required :rules="emailRules" v-model="email"></v-text-field>
-    <v-text-field label="Phone" required :rules="phoneRules" v-model="phone"></v-text-field>
+    <v-text-field label="Phone" required :rules="phoneRules" v-mask="'###- #### ####'" v-model="phone"></v-text-field>
     <v-btn @click="submit" :disabled="!valid">Submit</v-btn>
   </v-form>
 </div>
@@ -39,7 +39,7 @@ import { mask } from "vue-the-mask";
                     email => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email) ||
                     "Email must be valid"],
         phoneRules: [phone => !!phone || "Phone is required",
-                    phone => /^\d{7}$/.test(phone) || "Phone number should be at least 7 digits" ]
+                    phone => phone.length >= 8 || "Phone number should be at least 8 digits" ]
       }
     },
     methods: {
