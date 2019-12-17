@@ -43,9 +43,13 @@ import { mask } from "vue-the-mask";
       }
     },
     methods: {
+      // submit() {
+      //   console.log(`Name: ${this.name}`, `Email: ${this.email}`, `Phone: ${this.phone}`);
+      //   this.submitted = true
+      // },
       submit() {
-        console.log(`Name: ${this.name}`, `Email: ${this.email}`, `Phone: ${this.phone}`);
-        this.submitted = true
+        this.$store.dispatch("clearFavorites");
+        this.submitted = true;
       }
     }
   }
