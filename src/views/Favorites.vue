@@ -14,6 +14,9 @@
           <v-icon @click="removeFromFavorites(dog)">delete</v-icon>
         </v-list-item-action>
       </v-list-item>
+      <div class="btn-center">
+        <v-btn to="/form">Adopt</v-btn>
+      </div>
     </div>
   </v-list>
 </template>
@@ -34,5 +37,8 @@ import { mapActions } from "vuex";
 </script>
 
 <style lang="scss" scoped>
-
+.btn-center {
+  text-align: center;
+  padding: 8px;
+}
 </style>
