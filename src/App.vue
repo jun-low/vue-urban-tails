@@ -22,7 +22,7 @@
         </header>
         <router-view></router-view>
         <footer class="app-footer dark-brown">
-          <p>720 Lubowitz Grove Bridge | SINGAPORE 445603 | 8989-9876</p>
+          <p>720 Lubowitz Grove Bridge | Singapore 445603 | 8989-9876</p>
         </footer>
       </div>
     </main>
