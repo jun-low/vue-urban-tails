@@ -13,7 +13,7 @@
   <v-form v-else v-model="valid">
     <v-text-field label="Name" required :rules="nameRules" v-model="name"></v-text-field>
     <v-text-field label="Email" required :rules="emailRules" v-model="email"></v-text-field>
-    <v-text-field label="Phone" required :rules="phoneRules" v-mask="'###- #### ####'" v-model="phone"></v-text-field>
+    <v-text-field label="Phone" required :rules="phoneRules" v-mask="'#### ####'" v-model="phone"></v-text-field>
     <v-btn @click="submit" :disabled="!valid">Submit</v-btn>
   </v-form>
 </div>
