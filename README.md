@@ -1,6 +1,5 @@
 # vue-pet-shop
-
-> A Vue.js workshop project of creating a static Pet Shop web app 🐶
+ A Vue.js workshop project of creating a static Pet Shop web app 🐶
 
 ## Features
 - Switch the theme instantly.
